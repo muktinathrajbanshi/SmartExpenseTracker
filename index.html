@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Smart Expense Tracker</h1>
+
+      <div class="balance">
+        <h2>Balance: $<span id="balance">0</span></h2>
+        <div class="income-expense">
+          <div>Income: $<span id="income">0</span></div>
+          <div>Expense: $<span id="expense">0</span></div>
+        </div>
+      </div>
+
+      <div class="add-transaction">
+        <h3>Add Transaction</h3>
+        <form id="transaction-form">
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="number" id="amount" placeholder="Amount" required />
+          <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+          <input type="date" id="date" required />
+          <button type="submit">Add</button>
+        </form>
+      </div>
+
+      <div class="history">
+        <h3>Transaction History</h3>
+        <ul id="transaction-list"></ul>
+      </div>
+
+      <div class="chart-container">
+        <canvas id="expenseChart"></canvas>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
